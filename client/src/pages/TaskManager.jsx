@@ -10,8 +10,8 @@ const TaskManager = () => {
   const [filterStatus, setFilterStatus] = useState('all');
   const [searchTerm, setSearchTerm] = useState("");
   const [success, setSuccess] = useState("");
-
-
+  const [darkMode, setDarkMode] = useState(false);
+  const [highlightId, setHighlightId] = useState(null);
 
   const [newTask, setNewTask] = useState({
     title: '',
@@ -46,7 +46,8 @@ const TaskManager = () => {
         setEditTaskId(null);
         setEditingTask(null);
         setSuccess("Task updated successfully!");
-        setTimeout(() => setSuccess(""), 3000);
+        setHighlightId(editTaskId);
+        setTimeout(() => setHighlightId(null), 2000);
         } 
 
         else {
@@ -74,6 +75,7 @@ const TaskManager = () => {
         setTasks(tasks.map(task => task.id === editTaskId ? res.data : task));
         setEditTaskId(null);
         setEditingTask(null);
+
     } catch (err) {
         console.error('Error updating task:', err);
         setError("Failed to update task");
@@ -132,10 +134,16 @@ const TaskManager = () => {
 
 
   return (
-    <div className="container mt-4 pb-5">
+    <div className={`container mt-4 ${darkMode ? 'bg-dark text-white' : 'bg-light text-dark'}`} style={{ minHeight: "100vh" }}>
+      <div className="text-end mb-3">
+        <button className="btn btn-outline-secondary" onClick={() => setDarkMode(!darkMode)}>
+            {darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+        </button>
+      </div>
+
       <h1 className="mb-4 text-center">📝 Task Manager</h1>
       <p className="text-muted">Total Tasks: {tasks.length} | Completed: {tasks.filter(task => task.status === 'done').length}</p>
-
+        
       {error && <div className="alert alert-danger">{error}</div>}
       {success && <div className="alert alert-success">{success}</div>}
       {loading && <p>Loading...</p>}
@@ -230,6 +238,20 @@ const TaskManager = () => {
             />
           </div>
 
+          <div className="mb-2">
+            <span className="me-3 badge bg-secondary">Total: {tasks.length}</span>
+            <span className="me-3 badge bg-warning">To Do: {tasks.filter(t => t.status === 'todo').length}</span>
+            <span className="me-3 badge bg-info">In Progress: {tasks.filter(t => t.status === 'inprogress').length}</span>
+            <span className="badge bg-success">Done: {tasks.filter(t => t.status === 'done').length}</span>
+          </div>
+
+          <div className="mb-3">
+            <button className={`btn btn-sm me-2 ${filterStatus === "all" ? "btn-primary" : "btn-outline-primary"}`} onClick={() => setFilterStatus("all")}>All</button>
+            <button className={`btn btn-sm me-2 ${filterStatus === "todo" ? "btn-primary" : "btn-outline-primary"}`} onClick={() => setFilterStatus("todo")}>To Do</button>
+            <button className={`btn btn-sm me-2 ${filterStatus === "inprogress" ? "btn-primary" : "btn-outline-primary"}`} onClick={() => setFilterStatus("inprogress")}>In Progress</button>
+            <button className={`btn btn-sm ${filterStatus === "done" ? "btn-primary" : "btn-outline-primary"}`} onClick={() => setFilterStatus("done")}>Done</button>
+          </div>
+
         <ul className="list-group">
         {tasks
             .sort((a, b) => { const order = { todo: 1, inprogress: 2, done: 3 }; return order[a.status] - order[b.status]; })
@@ -239,7 +261,7 @@ const TaskManager = () => {
             task.description.toLowerCase().includes(searchTerm.toLowerCase()))
             )
             .map(task => (
-            <li key={task.id} className="list-group-item d-flex justify-content-between align-items-center">
+            <li key={task.id} className="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center">
                 <div>
                 <strong>{task.title}</strong>: {task.description}
                 <br />
