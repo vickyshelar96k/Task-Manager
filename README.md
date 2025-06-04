@@ -44,27 +44,30 @@ This is a full-stack Dockerized Task Manager web application built for the **Alp
 - **Dockerized**: Frontend and backend run in containers via `docker-compose`
 
 ## 📦 Docker Setup
+- Ensure you have Docker and Docker Compose installed.
 
-Ensure you have Docker and Docker Compose installed.
+## 📽️ Video Demo
+- https://drive.google.com/file/d/1VLwe2r-HMuRfLmzv2t330tH5giE5gQVk/view?usp=sharing
 ---
 ## 📸 Screenshots
-## 📸 Task Manager(Home) Page Preview
-![Home Page](./assets/HomePage1_Light_Mode)
-![Home Page](./assets/HomePage2_Light_Mode)
+## 📸 Task Manager(Home) Page Preview Light Mode
+![HomePage1_Light_Mode](https://github.com/user-attachments/assets/a07fa6f3-bba0-4c95-bece-e2c7d3e278b5)
+![HomePage2_Light_Mode](https://github.com/user-attachments/assets/3795af6e-cd0f-481e-ba8a-2e62bb9432bb)
+
 ## 📸 Dark Mode Enabled
-![Home Page](./assets/HomePage_Dark_Mode_1)
-![Home Page](./assets/HomePage_Dark_Mode_2)
+![HomePage_Dark_Mode_1](https://github.com/user-attachments/assets/80b10faa-3d0f-4b0a-b534-e7c80cdd3207)
+![HomePage_Dark_Mode_2](https://github.com/user-attachments/assets/0b3e7665-164c-4058-a7ac-8c21de264135)
 
 ## 📸 About Page Preview
-![About Page](./assets/About_Me_Page1.jpg)
-![About Page](./assets/About_Me_Page2.jpg)
-![About Page](./assets/About_Me_Page3.jpg)
-![About Page](./assets/About_Me_Page4.jpg)
-![About Page](./assets/About_Me_Page5.jpg)
+![About_Me_Page1](https://github.com/user-attachments/assets/cc88c33b-9124-4ab6-8440-c8384e883af9)
+![About_Me_Page2](https://github.com/user-attachments/assets/2dd27ffc-4199-40b3-a17f-18de5c5f7f3d)
+![About_Me_Page3](https://github.com/user-attachments/assets/f485a3e8-70a3-4bbb-b086-4a22d9359a1b)
+![About_Me_Page4](https://github.com/user-attachments/assets/df495dfb-e340-40fa-a4dd-83a869bef629)
+![About_Me_Page5](https://github.com/user-attachments/assets/b756f800-d8d1-45dc-a40e-3e408edf5888)
 
 ## 📸 Contact Page Preview
-![Contact Page](./assets/Contact_Page_1.jpg)
-![Contact Page](./assets/Contact_Page_2.jpg)
+![Contact_Page_1](https://github.com/user-attachments/assets/dd4bea43-8b1d-4c07-af8d-60292d9a073d)
+![Contact_Page_2](https://github.com/user-attachments/assets/2b0a823a-9926-4ed5-b29a-12afd2d50d9e)
 
 ## 📦 Setup Instructions
 
