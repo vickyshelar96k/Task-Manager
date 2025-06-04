@@ -47,7 +47,7 @@ This is a full-stack Dockerized Task Manager web application built for the **Alp
 - Ensure you have Docker and Docker Compose installed.
 
 ## 📽️ Video Demo
-- https://drive.google.com/file/d/1VLwe2r-HMuRfLmzv2t330tH5giE5gQVk/view?usp=sharing
+- https://drive.google.com/file/d/1RVQC6nGW-13pdxabuD1aX0JRZ7I8BZwZ/view?usp=sharing
 ---
 ## 📸 Screenshots
 ## 📸 Task Manager(Home) Page Preview Light Mode
