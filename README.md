@@ -108,4 +108,3 @@ The search is handled via /api/tasks/search-similar endpoint.
 
 ## ✅ Author
 Name: Vikas Shelar
-Role: Full Stack Developer
