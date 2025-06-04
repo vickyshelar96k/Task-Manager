@@ -94,17 +94,9 @@ We retrieve top 3 similar tasks using:
 The search is handled via /api/tasks/search-similar endpoint.
 
 ## 📂 Folder Structure (Simplified)
-├── client/               # React frontend
-│   ├── src/pages         # About.jsx, Contact.jsx, TaskManager.jsx
-│   ├── App.jsx
-│   └── main.jsx
-├── server/               # Node + Express backend
-│   ├── routes/taskRoutes.js
-│   ├── controllers/
-│   └── db.js
-├── docker-compose.yml
-├── Dockerfile (frontend & backend)
-└── README.md
+![image](https://github.com/user-attachments/assets/3ba2b204-16b7-406c-85fc-5f7c8fa94a46)
+
+
 
 ## ✅ Author
 Name: Vikas Shelar
