@@ -4,6 +4,7 @@ import TaskManager from './pages/TaskManager';
 import AppNavbar from './components/Navbar';
 import Footer from './components/Footer';
 import About from './pages/About';
+import Contact from './pages/Contact';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<TaskManager />} />
         <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<div className="container mt-4"><h2>404 - Page Not Found</h2></div>} />
       </Routes>
       <Footer/>
